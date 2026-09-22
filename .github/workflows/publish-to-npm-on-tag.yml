@@ -1,9 +1,7 @@
+
 name: publish-on-tag
 
 on:
-  push:
-    tags:
-      - 'chrome-devtools-mcp-v*'
   workflow_dispatch:
     inputs:
       npm-publish:
@@ -15,6 +13,7 @@ on:
         default: true
         type: boolean
 
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   id-token: write # Required for OIDC
   contents: read
